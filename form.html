@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>表单页面</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .inline-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .inline-group input[type="text"],
+    .inline-group select {
+      width: 30%;
+      padding: 8px;
+      font-size: 1em;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-container">
+    <h1>表单提交</h1>
+    <form action="#" method="post" class="form" enctype="multipart/form-data">
+      <label for="username">昵称：</label>
+      <input type="text" name="username" id="username" placeholder="请输入昵称" /><br><br>
+      <label for="password">密码：</label>
+      <input type="password" name="password" id="password" placeholder="请输入密码" /><br><br>
+      <label for="email">邮箱：</label>
+      <div class="inline-group">
+        <input type="text" name="email_local" id="email" placeholder="请输入邮箱" />
+        <span>@</span>
+        <select name="email_domain" id="email_domain">
+          <option value="gmail.com">gmail.com</option>
+          <option value="qq.com">qq.com</option>
+          <option value="163.com">163.com</option>
+        </select>
+      </div>
+      <br>
+      <label>性别：</label>
+      <div class="radio-group">
+        <input type="radio" id="male" name="gender" value="男" checked>
+        <label for="male">男</label>
+        <input type="radio" id="female" name="gender" value="女">
+        <label for="female">女</label>
+      </div>
+      <br>
+      <label>兴趣爱好：</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="reading" name="hobby" value="阅读">
+        <label for="reading">阅读</label>
+        <input type="checkbox" id="travel" name="hobby" value="旅行">
+        <label for="travel">旅行</label>
+        <input type="checkbox" id="sports" name="hobby" value="运动">
+        <label for="sports">运动</label>
+        <input type="checkbox" id="music" name="hobby" value="音乐">
+        <label for="music">音乐</label>
+        <input type="checkbox" id="movie" name="hobby" value="电影">
+        <label for="movie">电影</label>
+        <input type="checkbox" id="photography" name="hobby" value="摄影">
+        <label for="photography">摄影</label>
+      </div>
+      <br>
+      <label for="bio">个人简介：</label><br>
+      <textarea id="bio" name="bio" placeholder="请输入个人简介" rows="8" style="width: 100%;"></textarea>
+      <br><br>
+      <label for="photo">上传个人照片：</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+      <br><br>
+      <button type="submit">提交</button>
+    </form>
+    <hr>
+    <p class="back-link">
+      返回 <a href="index.html">简历页面</a>
+    </p >
+  </div>
+</body>
+</html>
